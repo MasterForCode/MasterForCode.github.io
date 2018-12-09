@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://MasterForCode.github.io">
-  <title>Sharing</title>
+  <title>Docker-CE的安装(Docker的免费版) | Sharing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="南通大学电气工程学院2011级，全栈工程师">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sharing">
-<meta property="og:url" content="https://MasterForCode.github.io/index.html">
+  <meta name="description" content="本文基于的环境：  VMware虚拟机，为VMware® Workstation 14 Pro的14.1.1 build-7528167版本 系统环境，Linux version 3.10.0-862.el7.x86_64 (builder@kbuilder.dev.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-28) (GCC)">
+<meta name="keywords" content="Docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker-CE的安装(Docker的免费版)">
+<meta property="og:url" content="https://MasterForCode.github.io/2018/10/04/docker安装/index.html">
 <meta property="og:site_name" content="Sharing">
-<meta property="og:description" content="南通大学电气工程学院2011级，全栈工程师">
+<meta property="og:description" content="本文基于的环境：  VMware虚拟机，为VMware® Workstation 14 Pro的14.1.1 build-7528167版本 系统环境，Linux version 3.10.0-862.el7.x86_64 (builder@kbuilder.dev.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-28) (GCC)">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-06T12:31:00.861Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sharing">
-<meta name="twitter:description" content="南通大学电气工程学院2011级，全栈工程师">
+<meta name="twitter:title" content="Docker-CE的安装(Docker的免费版)">
+<meta name="twitter:description" content="本文基于的环境：  VMware虚拟机，为VMware® Workstation 14 Pro的14.1.1 build-7528167版本 系统环境，Linux version 3.10.0-862.el7.x86_64 (builder@kbuilder.dev.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-28) (GCC)">
   
     <link rel="alternative" href="/atom.xml" title="Sharing" type="application/atom+xml">
   
@@ -135,219 +137,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-CentOS下安装docker" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-docker安装" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/09/CentOS下安装docker/">CentOS下安装docker</a>
-    </h1>
-  
-
-        
-        <a href="/2018/12/09/CentOS下安装docker/" class="archive-article-date">
-  	<time datetime="2018-12-09T05:08:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>查看CentOS版本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 3.10以下版本不支持</span></span><br><span class="line">[root@localhost ~]<span class="comment"># uname -r</span></span><br><span class="line">3.10.0-862.el7.x86_64</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>更新系统（建议）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum update</span></span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>删除旧版本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum remove docker \</span></span><br><span class="line">&gt;                   docker-client \</span><br><span class="line">&gt;                   docker-client-latest \</span><br><span class="line">&gt;                   docker-common \</span><br><span class="line">&gt;                   docker-latest \</span><br><span class="line">&gt;                   docker-latest-logrotate \</span><br><span class="line">&gt;                   docker-logrotate \</span><br><span class="line">&gt;                   docker-selinux \</span><br><span class="line">&gt;                   docker-engine-selinux \</span><br><span class="line">&gt;                   docker-engine</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>安装必要包<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum-utils提供yum-config-manager实用程序，devicemapper存储驱动程序需要device-mapper-persistent-data和lvm2。</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum install -y yum-utils \</span></span><br><span class="line">&gt;   device-mapper-persistent-data \</span><br><span class="line">&gt;   lvm2</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>设置仓库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum-config-manager \</span></span><br><span class="line">&gt;     --add-repo \</span><br><span class="line">&gt;     https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>可选：启用边缘和测试存储库。这些存储库包含在上面的docker.repo文件中，但默认情况下处于禁用状态。您可以将它们与稳定存储库一起启用。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum-config-manager --enable docker-ce-edge</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum-config-manager --enable docker-ce-test</span></span><br><span class="line"><span class="comment"># 禁用示例</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum-config-manager --disable docker-ce-edge</span></span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>安装docker(最新版本)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum install docker-ce</span></span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>启动docker<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># systemctl start docker</span></span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>验证docker是否安装完成<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># docker run hello-world</span></span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>为了避免（普通用户）每次使用docker命令都使用sudo，添加docker用户和用户组<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加docker用户</span></span><br><span class="line">[root@localhost ~]<span class="comment"># useradd -g docker docker</span></span><br><span class="line"><span class="comment"># 添加docker用户组，your-name为赋予操作权限的用户</span></span><br><span class="line">[root@localhost ~]<span class="comment"># usermod -aG docker your-user</span></span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>开机自启<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># systemctl enable docker.service</span></span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>卸载</p>
-<ul>
-<li>查看安装的软件包<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum list installed | grep docker</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<ul>
-<li><p>删除安装的软件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 示例</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum -y remove docker-engine.x86_64</span></span><br><span class="line"><span class="comment"># and so on</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>删除所有镜像，容器和卷组</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看docker相关文件及文件夹</span></span><br><span class="line">[root@localhost ~]<span class="comment"># find | grep docker</span></span><br><span class="line"><span class="comment"># 示例</span></span><br><span class="line">[root@localhost ~]<span class="comment"># rm -rf /var/lib/docker</span></span><br><span class="line"><span class="comment"># and so on</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>删除用户用户组配置信息</p>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/09/CentOS下安装docker/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Docker说明及常用命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/06/Docker说明及常用命令/">Docker说明及常用命令</a>
-    </h1>
-  
-
-        
-        <a href="/2018/10/06/Docker说明及常用命令/" class="archive-article-date">
-  	<time datetime="2018-10-06T09:52:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<ul>
-<li>本文基于的环境：<blockquote>
-<ul>
-<li>VMware虚拟机，为VMware® Workstation 14 Pro的14.1.1 build-7528167版本</li>
-<li>系统环境，Linux version 3.10.0-862.el7.x86_64 (<a href="mailto:builder@kbuilder.dev.centos.org" target="_blank" rel="noopener">builder@kbuilder.dev.centos.org</a>) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-28) (GCC) ) #1 SMP Fri Apr 20 16:44:24 UTC 2018</li>
-<li>网络yum源</li></ul></blockquote></li></ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/06/Docker说明及常用命令/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-docker安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/04/docker安装/">Docker-CE的安装(Docker的免费版)</a>
+    <h1 class="article-title" itemprop="name">
+      Docker-CE的安装(Docker的免费版)
     </h1>
   
 
@@ -371,9 +168,73 @@
 </blockquote>
 </li>
 </ul>
-        
+<a id="more"></a>
+<ul>
+<li><p>说明</p>
+<blockquote>
+<ul>
+<li>本文只是对docker官网的一种简单摘录和翻译，如需了解更加详细的内容，请登陆docker<a href="https://www.docker.com" target="_blank" rel="noopener">官网</a>查看详细内容</li>
+<li>点击<a href="https://docs.docker.com/install/linux/docker-ce/centos/" target="_blank" rel="noopener">链接</a>查看本文使用的docker文档</li>
+<li>如果在使用该文档的过程中发现错误，可将错误以邮件的形式发送到本人邮箱<a href="mailto:2514275491@qq.com" target="_blank" rel="noopener">2514275491@qq.com</a>(ps:不保证回复)</li>
+</ul>
+</blockquote>
+</li>
+<li><p>版权说明</p>
+<blockquote>
+<ul>
+<li>本文为原创</li>
+<li>本文可随意转载复制</li>
+</ul>
+</blockquote>
+</li>
+<li><p>系统要求</p>
+<blockquote>
+<ul>
+<li>To install Docker CE, you need a maintained version of CentOS 7. Archived versions aren’t supported or tested.<br>The centos-extras repository must be enabled. This repository is enabled by default, but if you have disabled it, you need to re-enable it.<br>要安装Docker CE，你需要一个CentOS7的维护版本，文档版本不支持或并没有测试过。必须启用CentOS-Extras仓库，该仓库一般情况下默认启用，但是，如果该仓库被禁用，你必须重新启用它。</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h3 id="1-卸载旧版本"><a href="#1-卸载旧版本" class="headerlink" title="1.卸载旧版本"></a>1.卸载旧版本</h3><p>&emsp;&emsp;Older versions of Docker were called docker or docker-engine. If these are installed, uninstall them, along with associated dependencies.<br>&emsp;&emsp;Docker的旧版本被称为docker或docker-engine。如果你已安装了它们，卸载它们及相关依赖项。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum remove docker \</span><br><span class="line">              docker-client \</span><br><span class="line">              docker-client-latest \</span><br><span class="line">              docker-common \</span><br><span class="line">              docker-latest \</span><br><span class="line">              docker-latest-logrotate \</span><br><span class="line">              docker-logrotate \</span><br><span class="line">              docker-selinux \</span><br><span class="line">              docker-engine-selinux \</span><br><span class="line">              docker-engine</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-安装必要依赖"><a href="#2-安装必要依赖" class="headerlink" title="2.安装必要依赖"></a>2.安装必要依赖</h3><p>&emsp;&emsp;yum-utils provides the yum-config-manager utility, and device-mapper-persistent-data and lvm2 are required by the  devicemapper storage driver.<br>&emsp;&emsp;yum-utils提供了yum-config-manager实用程序，并且device-mapper-persistent-data和lvm2是device mapper存储驱动程序所需的。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum install -y yum-utils \</span><br><span class="line">	  device-mapper-persistent-data \</span><br><span class="line">	  lvm2</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-设置仓库"><a href="#3-设置仓库" class="headerlink" title="3.设置仓库"></a>3.设置仓库</h3><p>&emsp;&emsp;You always need the stable repository, even if you want to install builds from the edge or test repositories as well.<br>&emsp;&emsp;你总是需要稳定的存储库，即使你想要从edge或test仓库安装构建版本。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum-config-manager \</span><br><span class="line">    --add-repo \</span><br><span class="line">    https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-可选设置项，开启edge和test仓库"><a href="#4-可选设置项，开启edge和test仓库" class="headerlink" title="4.可选设置项，开启edge和test仓库"></a>4.可选设置项，开启edge和test仓库</h3><p>&emsp;&emsp;These repositories are included in the docker.repo file above but are disabled by default. You can enable them alongside the stable repository.<br>&emsp;&emsp;这些仓库包含在docker.repo文件中。但在默认情况下是禁用的。你可以在稳定仓库上启用它们。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum-config-manager --<span class="built_in">enable</span> docker-ce-edge</span><br><span class="line">$ sudo yum-config-manager --<span class="built_in">enable</span> docker-ce-test</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;You can disable the edge or test repository by running the yum-config-manager command with the –disable flag. To re-enable it, use the –enable flag. The following command disables the edge repository.<br>&emsp;&emsp;你可以通过使用禁用标志来运行yum-config-manager命令来禁用edge或test仓库。要重新启用它，请使用-enable标志。例，禁用edge仓库：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum-config-manager --<span class="built_in">disable</span> docker-ce-edge</span><br></pre></td></tr></table></figure></p>
+<h3 id="5-安装最新版本的Dokder-CE"><a href="#5-安装最新版本的Dokder-CE" class="headerlink" title="5.安装最新版本的Dokder CE"></a>5.安装最新版本的Dokder CE</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum install docker-ce</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;如果报错要求container-selinux &gt;= 2.9，执行以下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum install container-selinux</span><br></pre></td></tr></table></figure></p>
+<h3 id="6-可选项，安装指定版本的Docker-CE"><a href="#6-可选项，安装指定版本的Docker-CE" class="headerlink" title="6.可选项，安装指定版本的Docker CE"></a>6.可选项，安装指定版本的Docker CE</h3><p>&emsp;&emsp;1.在仓库中查看当前可用的版本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum list docker-ce --showduplicates | sort -r</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;2.根据需求选择版本安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum install docker-ce-&lt;VERSION STRING&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="7-启动Docker"><a href="#7-启动Docker" class="headerlink" title="7.启动Docker"></a>7.启动Docker</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+<h3 id="8-通过运行hello-world确定Docker-CE已正确安装"><a href="#8-通过运行hello-world确定Docker-CE已正确安装" class="headerlink" title="8.通过运行hello-world确定Docker CE已正确安装"></a>8.通过运行hello-world确定Docker CE已正确安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run hello-world</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;这个命令会下载一个测试镜像并在一个容器中运行它。当容器运行时，它会打印一条信息消息之后会退出。</p>
+<h3 id="9-将用户加入用户组"><a href="#9-将用户加入用户组" class="headerlink" title="9.将用户加入用户组"></a>9.将用户加入用户组</h3><p>&emsp;&emsp;The Docker daemon binds to a Unix socket instead of a TCP port. By default that Unix socket is owned by the user root and other users can only access it using sudo. The Docker daemon always runs as the root user.</p>
+<p>&emsp;&emsp;If you don’t want to preface the docker command with sudo, create a Unix group called docker and add users to it. When the Docker daemon starts, it creates a Unix socket accessible by members of the docker group.<br>&emsp;&emsp;Docker守护进程绑定到Unix套接字而不是TCP端口。默认情况下，Unix套接字属于root用户，其他用户只能使用sudo访问它。Docker守护程序总是作为根用户运行。</p>
+<p>&emsp;&emsp;如果不想用在docker命令前加上sudo，请创建一个名为docker的Unix组并向其添加用户。当Docker守护进程启动时，它将创建一个供Docker组成员访问的Unix套接字。<br>&emsp;&emsp;1.创建docker用户组<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo groupadd docker</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;2.把用户添加到docker组中<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo usermod -aG docker <span class="variable">$USER</span></span><br></pre></td></tr></table></figure></p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -393,16 +254,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/04/docker安装/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://MasterForCode.github.io/2018/10/04/docker安装/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/10/06/Docker说明及常用命令/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Docker说明及常用命令
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/10/01/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -417,84 +346,48 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/01/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2018/10/01/hello-world/" class="archive-article-date">
-  	<time datetime="2018-10-01T02:36:46.667Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/01/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-卸载旧版本"><span class="toc-number">1.</span> <span class="toc-text">1.卸载旧版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装必要依赖"><span class="toc-number">2.</span> <span class="toc-text">2.安装必要依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-设置仓库"><span class="toc-number">3.</span> <span class="toc-text">3.设置仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-可选设置项，开启edge和test仓库"><span class="toc-number">4.</span> <span class="toc-text">4.可选设置项，开启edge和test仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-安装最新版本的Dokder-CE"><span class="toc-number">5.</span> <span class="toc-text">5.安装最新版本的Dokder CE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-可选项，安装指定版本的Docker-CE"><span class="toc-number">6.</span> <span class="toc-text">6.可选项，安装指定版本的Docker CE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-启动Docker"><span class="toc-number">7.</span> <span class="toc-text">7.启动Docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-通过运行hello-world确定Docker-CE已正确安装"><span class="toc-number">8.</span> <span class="toc-text">8.通过运行hello-world确定Docker CE已正确安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-将用户加入用户组"><span class="toc-number">9.</span> <span class="toc-text">9.将用户加入用户组</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
+  
+  
+  
 
   
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "https://MasterForCode.github.io/2018/10/04/docker安装/",
+  owner: 'MasterForCode',
+  repo: 'MasterForCode.github.io',
+  oauth: {
+    client_id: '9ef5ba2861e59899b841',
+    client_secret: 'a9ee4a0dfd314c980b33d39b78afe7494957c4a1',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
 
 
@@ -517,8 +410,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
