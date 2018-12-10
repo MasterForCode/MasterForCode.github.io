@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://MasterForCode.github.io">
-  <title>Archives | Sharing</title>
+  <title>Sharing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="南通大学电气工程学院2011级，全栈工程师">
-<meta property="og:type" content="website">
+  <meta name="description" content="下载jdk1.8压缩文件 解压1234# 创建文件mkdir /usr/local/java# 解压tar -zxvf filename -C /usr/local/java">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Sharing">
-<meta property="og:url" content="https://MasterForCode.github.io/archives/index.html">
+<meta property="og:url" content="https://MasterForCode.github.io/2018/12/10/CentOS下安装JDK1.8/index.html">
 <meta property="og:site_name" content="Sharing">
-<meta property="og:description" content="南通大学电气工程学院2011级，全栈工程师">
+<meta property="og:description" content="下载jdk1.8压缩文件 解压1234# 创建文件mkdir /usr/local/java# 解压tar -zxvf filename -C /usr/local/java">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-10T11:20:07.725Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sharing">
-<meta name="twitter:description" content="南通大学电气工程学院2011级，全栈工程师">
+<meta name="twitter:description" content="下载jdk1.8压缩文件 解压1234# 创建文件mkdir /usr/local/java# 解压tar -zxvf filename -C /usr/local/java">
   
     <link rel="alternative" href="/atom.xml" title="Sharing" type="application/atom+xml">
   
@@ -135,269 +136,184 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-CentOS下安装JDK1.8" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">下载jdk1.8</a>压缩文件<br><br></li>
+<li>解压<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建文件</span></span><br><span class="line">mkdir /usr/<span class="built_in">local</span>/java</span><br><span class="line"><span class="comment"># 解压</span></span><br><span class="line">tar -zxvf filename -C /usr/<span class="built_in">local</span>/java</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<a id="more"></a>
+<ol start="3">
+<li><p>编辑/etc/下的profile文件，配置环境变量</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon software]<span class="comment"># vim /etc/profile</span></span><br><span class="line"><span class="comment"># jdk1.8.0_101根据具体的小版本修改</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/usr/<span class="built_in">local</span>/java/jdk1.8.0_101</span><br><span class="line"><span class="built_in">export</span> JRE_HOME=<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib:<span class="variable">$&#123;JRE_HOME&#125;</span>/lib</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使/etc/profile生效</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon jdk1.8.0_101]<span class="comment"># source /etc/profile</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@bogon jdk1.8.0_101]<span class="comment"># java -version</span></span><br><span class="line">java version <span class="string">"1.8.0_101"</span></span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_101-b13)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/10/CentOS下安装JDK1.8/" class="archive-article-date">
-  	<time datetime="2018-12-10T11:15:59.491Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-10</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://MasterForCode.github.io/2018/12/10/CentOS下安装JDK1.8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/10/Windows下安装MySql8/" class="archive-article-date">
-  	<time datetime="2018-12-10T11:15:31.767Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-10</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/10/CentOS下卸载RPM方式安装的MySql/" class="archive-article-date">
-  	<time datetime="2018-12-10T11:14:08.346Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-10</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+  
+    <a href="/2018/12/10/Windows下安装MySql8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/10/CentOS下安装Sonarqube/" class="archive-article-date">
-  	<time datetime="2018-12-10T11:12:30.832Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-10</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/10/CentOS下安装MySql/" class="archive-article-date">
-  	<time datetime="2018-12-10T11:12:07.864Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-10</time>
-</a>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
         </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/10/CentOS下安装Maven/" class="archive-article-date">
-  	<time datetime="2018-12-10T11:11:35.571Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-10</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/10/CentOS下安装Jenkins/" class="archive-article-date">
-  	<time datetime="2018-12-10T11:11:25.582Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-10</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/10/CentOS下安装Git/" class="archive-article-date">
-  	<time datetime="2018-12-10T11:10:28.110Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-10</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/09/CentOS下安装docker/" class="archive-article-date">
-  	<time datetime="2018-12-09T05:08:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/09/CentOS下安装docker/">CentOS下安装docker</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/10/06/Docker说明及常用命令/" class="archive-article-date">
-  	<time datetime="2018-10-06T09:52:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/06/Docker说明及常用命令/">Docker说明及常用命令</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "https://MasterForCode.github.io/2018/12/10/CentOS下安装JDK1.8/",
+  owner: 'MasterForCode',
+  repo: 'MasterForCode.github.io',
+  oauth: {
+    client_id: '9ef5ba2861e59899b841',
+    client_secret: 'a9ee4a0dfd314c980b33d39b78afe7494957c4a1',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
 
 
@@ -421,8 +337,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
