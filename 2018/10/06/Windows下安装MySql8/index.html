@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://MasterForCode.github.io">
   <title>Windows下安装MySql8 | Sharing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="下载   卸载旧MySql服务  删除前做好备份  停止服务，以管理员身份打开cmd，运行net stop [服务名] 通过卸载工具卸载MySQL（安装版本需执行该操作，免安装版本不需要） 卸载服务，运行sc delete MySQL 清理注册表 1.windows + r  2.输入regedit  3.删除\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\s">
+  <meta name="description" content="下载   卸载旧MySql服务  删除前做好备份  停止服务，以管理员身份打开cmd，运行net stop [服务名] 通过卸载工具卸载MySQL（安装版本需执行该操作，免安装版本不需要） 卸载服务，运行sc delete MySQL">
 <meta name="keywords" content="mysql,windows">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows下安装MySql8">
 <meta property="og:url" content="https://MasterForCode.github.io/2018/10/06/Windows下安装MySql8/index.html">
 <meta property="og:site_name" content="Sharing">
-<meta property="og:description" content="下载   卸载旧MySql服务  删除前做好备份  停止服务，以管理员身份打开cmd，运行net stop [服务名] 通过卸载工具卸载MySQL（安装版本需执行该操作，免安装版本不需要） 卸载服务，运行sc delete MySQL 清理注册表 1.windows + r  2.输入regedit  3.删除\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\s">
+<meta property="og:description" content="下载   卸载旧MySql服务  删除前做好备份  停止服务，以管理员身份打开cmd，运行net stop [服务名] 通过卸载工具卸载MySQL（安装版本需执行该操作，免安装版本不需要） 卸载服务，运行sc delete MySQL">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-10T11:35:16.425Z">
+<meta property="og:updated_time" content="2018-12-10T11:40:02.910Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows下安装MySql8">
-<meta name="twitter:description" content="下载   卸载旧MySql服务  删除前做好备份  停止服务，以管理员身份打开cmd，运行net stop [服务名] 通过卸载工具卸载MySQL（安装版本需执行该操作，免安装版本不需要） 卸载服务，运行sc delete MySQL 清理注册表 1.windows + r  2.输入regedit  3.删除\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\s">
+<meta name="twitter:description" content="下载   卸载旧MySql服务  删除前做好备份  停止服务，以管理员身份打开cmd，运行net stop [服务名] 通过卸载工具卸载MySQL（安装版本需执行该操作，免安装版本不需要） 卸载服务，运行sc delete MySQL">
   
     <link rel="alternative" href="/atom.xml" title="Sharing" type="application/atom+xml">
   
@@ -169,8 +169,18 @@
 <li>停止服务，以管理员身份打开cmd，运行net stop [服务名]</li>
 <li>通过卸载工具卸载MySQL（安装版本需执行该操作，免安装版本不需要）</li>
 <li>卸载服务，运行sc delete MySQL</li>
+</ul>
+<a id="more"></a>
+<ul>
 <li>清理注册表</li>
-<li>1.windows + r<br>  2.输入regedit<br>  3.删除\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\services\eventlog\Application\MySQL下MySQL整个目录</li>
+<li><ol>
+<li>windows + r</li>
+<li>输入regedit<ol start="3">
+<li>删除\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\services\eventlog\Application\MySQL下MySQL整个目录</li>
+</ol>
+</li>
+</ol>
+</li>
 <li><p>删除旧文件</p>
 <blockquote>
 <p>解压下载文件到指定目录</p>
@@ -180,7 +190,6 @@
 </li>
 <li>添加配置信息</li>
 </ul>
-<a id="more"></a>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line"><span class="comment"># 设置3306端口</span></span><br><span class="line">port=3306</span><br><span class="line"><span class="comment"># 设置mysql的安装目录</span></span><br><span class="line">basedir=D:\\soft\\mysql-8.0.13-winx64   <span class="comment"># 切记此处一定要用双斜杠\\，单斜杠我这里会出错。</span></span><br><span class="line"><span class="comment"># 设置mysql数据库的数据的存放目录</span></span><br><span class="line">datadir=D:\\soft\\mysql-8.0.13-winx64\\data   <span class="comment"># 此处同上</span></span><br><span class="line"><span class="comment"># 允许最大连接数</span></span><br><span class="line">max_connections=200</span><br><span class="line"><span class="comment"># 允许连接失败的次数。这是为了防止有人从该主机试图攻击数据库系统</span></span><br><span class="line">max_connect_errors=10</span><br><span class="line"><span class="comment"># 服务端使用的字符集默认为UTF8</span></span><br><span class="line">character-set-server=utf8</span><br><span class="line"><span class="comment"># 创建新表时将使用的默认存储引擎</span></span><br><span class="line">default-storage-engine=INNODB</span><br><span class="line"><span class="comment"># 默认使用“mysql_native_password”插件认证</span></span><br><span class="line">default_authentication_plugin=mysql_native_password</span><br><span class="line">[mysql]</span><br><span class="line"><span class="comment"># 设置mysql客户端默认字符集</span></span><br><span class="line">default-character-set=utf8</span><br><span class="line">[client]</span><br><span class="line"><span class="comment"># 设置mysql客户端连接服务端时默认使用的端口</span></span><br><span class="line">port=3306</span><br><span class="line">default-character-set=utf8</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>初始化</p>
@@ -303,18 +312,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/10/06/CentOS下卸载RPM方式安装的MySql/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/10/06/Docker说明及常用命令/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          CentOS下卸载RPM方式安装的MySql
+          Docker说明及常用命令
         
       </div>
     </a>
   
   
-    <a href="/2018/10/06/Docker说明及常用命令/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Docker说明及常用命令</div>
+    <a href="/2018/10/04/docker安装/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Docker-CE的安装(Docker的免费版)</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -477,11 +486,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color4">jdk</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">jdk</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -501,11 +510,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">windows</a>
+                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
+                <a href="javascript:void(0)" class="js-tag color3">windows</a>
               </li>
             
             <div class="clearfix"></div>
