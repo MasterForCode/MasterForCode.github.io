@@ -218,19 +218,19 @@
 
 
   
-    <article id="post-CentOS下安装Sonarqube" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Docker说明及常用命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/06/CentOS下安装Sonarqube/">CentOS下安装Sonarqube</a>
+      <a class="article-title" href="/2018/10/06/Docker说明及常用命令/">Docker说明及常用命令</a>
     </h1>
   
 
         
-        <a href="/2018/10/06/CentOS下安装Sonarqube/" class="archive-article-date">
+        <a href="/2018/10/06/Docker说明及常用命令/" class="archive-article-date">
   	<time datetime="2018-10-06T09:52:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-06</time>
 </a>
         
@@ -239,12 +239,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<blockquote>
-<p>安装jdk(1.8)</p>
-</blockquote>
-<blockquote>
-<p>安装MySql(版本为5.6~8.0)<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--创建数据库--&gt;</span><br><span class="line">mysql&gt; CREATE DATABASE sonar DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
+<ul>
+<li>本文基于的环境：<blockquote>
+<ul>
+<li>VMware虚拟机，为VMware® Workstation 14 Pro的14.1.1 build-7528167版本</li>
+<li>系统环境，Linux version 3.10.0-862.el7.x86_64 (<a href="mailto:builder@kbuilder.dev.centos.org" target="_blank" rel="noopener">builder@kbuilder.dev.centos.org</a>) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-28) (GCC) ) #1 SMP Fri Apr 20 16:44:24 UTC 2018</li>
+<li>网络yum源</li></ul></blockquote></li></ul>
         
       
 
@@ -258,11 +258,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">sonarqube</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
         		</li>
       		
 		</ul>
@@ -272,89 +268,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/06/CentOS下安装Sonarqube/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-CentOS下安装Git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/06/CentOS下安装Git/">CentOS下安装GIt</a>
-    </h1>
-  
-
-        
-        <a href="/2018/10/06/CentOS下安装Git/" class="archive-article-date">
-  	<time datetime="2018-10-06T09:52:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<ol>
-<li>使用yum安装Git</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install git</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/06/CentOS下安装Git/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/10/06/Docker说明及常用命令/">展开全文 >></a>
         </p>
       
 
@@ -633,6 +547,172 @@
 
 
   
+    <article id="post-CentOS下安装Sonarqube" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/06/CentOS下安装Sonarqube/">CentOS下安装Sonarqube</a>
+    </h1>
+  
+
+        
+        <a href="/2018/10/06/CentOS下安装Sonarqube/" class="archive-article-date">
+  	<time datetime="2018-10-06T09:52:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<blockquote>
+<p>安装jdk(1.8)</p>
+</blockquote>
+<blockquote>
+<p>安装MySql(版本为5.6~8.0)<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--创建数据库--&gt;</span><br><span class="line">mysql&gt; CREATE DATABASE sonar DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">sonarqube</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/06/CentOS下安装Sonarqube/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-CentOS下安装Git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/06/CentOS下安装Git/">CentOS下安装GIt</a>
+    </h1>
+  
+
+        
+        <a href="/2018/10/06/CentOS下安装Git/" class="archive-article-date">
+  	<time datetime="2018-10-06T09:52:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<ol>
+<li>使用yum安装Git</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install git</span><br></pre></td></tr></table></figure>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/06/CentOS下安装Git/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-CentOS下安装JDK1.8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -716,6 +796,90 @@
 
 
   
+    <article id="post-Windows下安装MySql8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/06/Windows下安装MySql8/">Windows下安装MySql8</a>
+    </h1>
+  
+
+        
+        <a href="/2018/10/06/Windows下安装MySql8/" class="archive-article-date">
+  	<time datetime="2018-10-06T09:52:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<blockquote>
+<p><a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">下载</a></p>
+</blockquote>
+<blockquote>
+<p>卸载旧MySql服务</p>
+</blockquote>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">windows</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/06/Windows下安装MySql8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-CentOS下卸载RPM方式安装的MySql" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -768,176 +932,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/10/06/CentOS下卸载RPM方式安装的MySql/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Docker说明及常用命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/06/Docker说明及常用命令/">Docker说明及常用命令</a>
-    </h1>
-  
-
-        
-        <a href="/2018/10/06/Docker说明及常用命令/" class="archive-article-date">
-  	<time datetime="2018-10-06T09:52:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<ul>
-<li>本文基于的环境：<blockquote>
-<ul>
-<li>VMware虚拟机，为VMware® Workstation 14 Pro的14.1.1 build-7528167版本</li>
-<li>系统环境，Linux version 3.10.0-862.el7.x86_64 (<a href="mailto:builder@kbuilder.dev.centos.org" target="_blank" rel="noopener">builder@kbuilder.dev.centos.org</a>) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-28) (GCC) ) #1 SMP Fri Apr 20 16:44:24 UTC 2018</li>
-<li>网络yum源</li></ul></blockquote></li></ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/06/Docker说明及常用命令/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Windows下安装MySql8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/06/Windows下安装MySql8/">Windows下安装MySql8</a>
-    </h1>
-  
-
-        
-        <a href="/2018/10/06/Windows下安装MySql8/" class="archive-article-date">
-  	<time datetime="2018-10-06T09:52:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<blockquote>
-<p><a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">下载</a></p>
-</blockquote>
-<blockquote>
-<p>卸载旧MySql服务</p>
-</blockquote>
-<p><strong>删除前做好备份</strong></p>
-<ul>
-<li>停止服务，以管理员身份打开cmd，运行net stop [服务名]</li>
-<li>通过卸载工具卸载MySQL（安装版本需执行该操作，免安装版本不需要）</li>
-<li>卸载服务，运行sc delete MySQL</li>
-</ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">windows</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/06/Windows下安装MySql8/">展开全文 >></a>
         </p>
       
 
@@ -1068,10 +1062,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">jdk</a>
               </li>
              
@@ -1088,15 +1078,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">sonarqube</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
