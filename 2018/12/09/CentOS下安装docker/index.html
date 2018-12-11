@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://MasterForCode.github.io">
   <title>CentOS下安装docker | Sharing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="查看CentOS版本123# 3.10以下版本不支持[root@localhost ~]# uname -r3.10.0-862.el7.x86_64">
+  <meta name="description" content="查看CentOS版本  123# 3.10以下版本不支持[root@localhost ~]# uname -r3.10.0-862.el7.x86_64">
 <meta name="keywords" content="linux,docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS下安装docker">
 <meta property="og:url" content="https://MasterForCode.github.io/2018/12/09/CentOS下安装docker/index.html">
 <meta property="og:site_name" content="Sharing">
-<meta property="og:description" content="查看CentOS版本123# 3.10以下版本不支持[root@localhost ~]# uname -r3.10.0-862.el7.x86_64">
+<meta property="og:description" content="查看CentOS版本  123# 3.10以下版本不支持[root@localhost ~]# uname -r3.10.0-862.el7.x86_64">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-10T11:32:21.877Z">
+<meta property="og:updated_time" content="2018-12-10T13:33:38.078Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS下安装docker">
-<meta name="twitter:description" content="查看CentOS版本123# 3.10以下版本不支持[root@localhost ~]# uname -r3.10.0-862.el7.x86_64">
+<meta name="twitter:description" content="查看CentOS版本  123# 3.10以下版本不支持[root@localhost ~]# uname -r3.10.0-862.el7.x86_64">
   
     <link rel="alternative" href="/atom.xml" title="Sharing" type="application/atom+xml">
   
@@ -159,50 +159,62 @@
       
         <hr>
 <blockquote>
-<p>查看CentOS版本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 3.10以下版本不支持</span></span><br><span class="line">[root@localhost ~]<span class="comment"># uname -r</span></span><br><span class="line">3.10.0-862.el7.x86_64</span><br></pre></td></tr></table></figure></p>
+<p>查看CentOS版本</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 3.10以下版本不支持</span></span><br><span class="line">[root@localhost ~]<span class="comment"># uname -r</span></span><br><span class="line">3.10.0-862.el7.x86_64</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <blockquote>
-<p>更新系统（建议）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum update</span></span><br></pre></td></tr></table></figure></p>
+<p>更新系统（建议）</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum update</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>删除旧版本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum remove docker \</span></span><br><span class="line">&gt;                   docker-client \</span><br><span class="line">&gt;                   docker-client-latest \</span><br><span class="line">&gt;                   docker-common \</span><br><span class="line">&gt;                   docker-latest \</span><br><span class="line">&gt;                   docker-latest-logrotate \</span><br><span class="line">&gt;                   docker-logrotate \</span><br><span class="line">&gt;                   docker-selinux \</span><br><span class="line">&gt;                   docker-engine-selinux \</span><br><span class="line">&gt;                   docker-engine</span><br></pre></td></tr></table></figure></p>
+<p>删除旧版本</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum remove docker \</span></span><br><span class="line">&gt;                   docker-client \</span><br><span class="line">&gt;                   docker-client-latest \</span><br><span class="line">&gt;                   docker-common \</span><br><span class="line">&gt;                   docker-latest \</span><br><span class="line">&gt;                   docker-latest-logrotate \</span><br><span class="line">&gt;                   docker-logrotate \</span><br><span class="line">&gt;                   docker-selinux \</span><br><span class="line">&gt;                   docker-engine-selinux \</span><br><span class="line">&gt;                   docker-engine</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>安装必要包<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum-utils提供yum-config-manager实用程序，devicemapper存储驱动程序需要device-mapper-persistent-data和lvm2。</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum install -y yum-utils \</span></span><br><span class="line">&gt;   device-mapper-persistent-data \</span><br><span class="line">&gt;   lvm2</span><br></pre></td></tr></table></figure></p>
+<p>安装必要包</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum-utils提供yum-config-manager实用程序，devicemapper存储驱动程序需要device-mapper-persistent-data和lvm2。</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum install -y yum-utils \</span></span><br><span class="line">&gt;   device-mapper-persistent-data \</span><br><span class="line">&gt;   lvm2</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>设置仓库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum-config-manager \</span></span><br><span class="line">&gt;     --add-repo \</span><br><span class="line">&gt;     https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure></p>
+<p>设置仓库</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum-config-manager \</span></span><br><span class="line">&gt;     --add-repo \</span><br><span class="line">&gt;     https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>可选：启用边缘和测试存储库。这些存储库包含在上面的docker.repo文件中，但默认情况下处于禁用状态。您可以将它们与稳定存储库一起启用。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum-config-manager --enable docker-ce-edge</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum-config-manager --enable docker-ce-test</span></span><br><span class="line"><span class="comment"># 禁用示例</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum-config-manager --disable docker-ce-edge</span></span><br></pre></td></tr></table></figure></p>
+<p>可选：启用边缘和测试存储库。这些存储库包含在上面的docker.repo文件中，但默认情况下处于禁用状态。您可以将它们与稳定存储库一起启用。</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum-config-manager --enable docker-ce-edge</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum-config-manager --enable docker-ce-test</span></span><br><span class="line"><span class="comment"># 禁用示例</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum-config-manager --disable docker-ce-edge</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>安装docker(最新版本)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum install docker-ce</span></span><br></pre></td></tr></table></figure></p>
+<p>安装docker(最新版本)</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum install docker-ce</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>启动docker<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># systemctl start docker</span></span><br></pre></td></tr></table></figure></p>
+<p>启动docker</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># systemctl start docker</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>验证docker是否安装完成<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># docker run hello-world</span></span><br></pre></td></tr></table></figure></p>
+<p>验证docker是否安装完成</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># docker run hello-world</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>为了避免（普通用户）每次使用docker命令都使用sudo，添加docker用户和用户组<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加docker用户</span></span><br><span class="line">[root@localhost ~]<span class="comment"># useradd -g docker docker</span></span><br><span class="line"><span class="comment"># 添加docker用户组，your-name为赋予操作权限的用户</span></span><br><span class="line">[root@localhost ~]<span class="comment"># usermod -aG docker your-user</span></span><br></pre></td></tr></table></figure></p>
+<p>为了避免（普通用户）每次使用docker命令都使用sudo，添加docker用户和用户组</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加docker用户</span></span><br><span class="line">[root@localhost ~]<span class="comment"># useradd -g docker docker</span></span><br><span class="line"><span class="comment"># 添加docker用户组，your-name为赋予操作权限的用户</span></span><br><span class="line">[root@localhost ~]<span class="comment"># usermod -aG docker your-user</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>开机自启<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># systemctl enable docker.service</span></span><br></pre></td></tr></table></figure></p>
+<p>开机自启</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># systemctl enable docker.service</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>卸载</p>
-<ul>
-<li>查看安装的软件包<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum list installed | grep docker</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
 </blockquote>
 <ul>
-<li><p>删除安装的软件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 示例</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum -y remove docker-engine.x86_64</span></span><br><span class="line"><span class="comment"># and so on</span></span><br></pre></td></tr></table></figure>
-</li>
+<li>查看安装的软件包</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum list installed | grep docker</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>删除安装的软件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 示例</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum -y remove docker-engine.x86_64</span></span><br><span class="line"><span class="comment"># and so on</span></span><br></pre></td></tr></table></figure>
+<ul>
 <li><p>删除所有镜像，容器和卷组</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看docker相关文件及文件夹</span></span><br><span class="line">[root@localhost ~]<span class="comment"># find | grep docker</span></span><br><span class="line"><span class="comment"># 示例</span></span><br><span class="line">[root@localhost ~]<span class="comment"># rm -rf /var/lib/docker</span></span><br><span class="line"><span class="comment"># and so on</span></span><br></pre></td></tr></table></figure>
 </li>

@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://MasterForCode.github.io">
   <title>CentOS下安装MySql | Sharing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="下载MySql的rpm文件12# yum仓库下载MySql[root@localhost ~]# yum localinstall https://repo.mysql.com//mysql80-community-release-el7-1.noarch.rpm">
+  <meta name="description" content="下载MySql的rpm文件  12# yum仓库下载MySql[root@localhost ~]# yum localinstall https://repo.mysql.com//mysql80-community-release-el7-1.noarch.rpm">
 <meta name="keywords" content="linux,mysql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS下安装MySql">
 <meta property="og:url" content="https://MasterForCode.github.io/2018/10/06/CentOS下安装MySql/index.html">
 <meta property="og:site_name" content="Sharing">
-<meta property="og:description" content="下载MySql的rpm文件12# yum仓库下载MySql[root@localhost ~]# yum localinstall https://repo.mysql.com//mysql80-community-release-el7-1.noarch.rpm">
+<meta property="og:description" content="下载MySql的rpm文件  12# yum仓库下载MySql[root@localhost ~]# yum localinstall https://repo.mysql.com//mysql80-community-release-el7-1.noarch.rpm">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-10T11:32:47.348Z">
+<meta property="og:updated_time" content="2018-12-10T13:35:46.953Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS下安装MySql">
-<meta name="twitter:description" content="下载MySql的rpm文件12# yum仓库下载MySql[root@localhost ~]# yum localinstall https://repo.mysql.com//mysql80-community-release-el7-1.noarch.rpm">
+<meta name="twitter:description" content="下载MySql的rpm文件  12# yum仓库下载MySql[root@localhost ~]# yum localinstall https://repo.mysql.com//mysql80-community-release-el7-1.noarch.rpm">
   
     <link rel="alternative" href="/atom.xml" title="Sharing" type="application/atom+xml">
   
@@ -159,25 +159,30 @@
       
         <hr>
 <blockquote>
-<p>下载MySql的rpm文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum仓库下载MySql</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum localinstall https://repo.mysql.com//mysql80-community-release-el7-1.noarch.rpm</span></span><br></pre></td></tr></table></figure></p>
+<p>下载MySql的rpm文件</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum仓库下载MySql</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum localinstall https://repo.mysql.com//mysql80-community-release-el7-1.noarch.rpm</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <blockquote>
-<p>安装MySql<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum安装MySQL</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum install mysql-community-server</span></span><br></pre></td></tr></table></figure></p>
+<p>安装MySql</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum安装MySQL</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum install mysql-community-server</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>启动MySql<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># service mysqld start</span></span><br></pre></td></tr></table></figure></p>
+<p>启动MySql</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># service mysqld start</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>查看MySql服务运行状态<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># service mysqld status</span></span><br></pre></td></tr></table></figure></p>
+<p>查看MySql服务运行状态</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># service mysqld status</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>查看初始密码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># grep 'temporary password' /var/log/mysqld.log</span></span><br></pre></td></tr></table></figure></p>
+<p>查看初始密码</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># grep 'temporary password' /var/log/mysqld.log</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>修改密码<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 先登录-- &gt;</span><br><span class="line">mysql&gt; ALERT USER 'root'@'localhost' IDENTIFIED BY 'wangbin_123';</span><br></pre></td></tr></table></figure></p>
+<p>修改密码</p>
 </blockquote>
-
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 先登录-- &gt;</span><br><span class="line">mysql&gt; ALERT USER 'root'@'localhost' IDENTIFIED BY 'wangbin_123';</span><br></pre></td></tr></table></figure>
       
 
       

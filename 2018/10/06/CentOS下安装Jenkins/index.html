@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="https://MasterForCode.github.io">
   <title>CentOS下安装Jenkins | Sharing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装JDK/Maven   安装Jenkins1[root@localhost ~]#  wget http://mirrors.jenkins.io/war/latest/jenkins.war  该版本为每周发布版本，提供了简单但安装过程和流畅的用户体验，还提供了Pipeline特性，用户可编写脚本执行自动化构建">
+  <meta name="description" content="安装JDK/Maven   安装Jenkins  1[root@localhost ~]#  wget http://mirrors.jenkins.io/war/latest/jenkins.war 该版本为每周发布版本，提供了简单但安装过程和流畅的用户体验，还提供了Pipeline特性，用户可编写脚本执行自动化构建">
 <meta name="keywords" content="linux,jenkins">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS下安装Jenkins">
 <meta property="og:url" content="https://MasterForCode.github.io/2018/10/06/CentOS下安装Jenkins/index.html">
 <meta property="og:site_name" content="Sharing">
-<meta property="og:description" content="安装JDK/Maven   安装Jenkins1[root@localhost ~]#  wget http://mirrors.jenkins.io/war/latest/jenkins.war  该版本为每周发布版本，提供了简单但安装过程和流畅的用户体验，还提供了Pipeline特性，用户可编写脚本执行自动化构建">
+<meta property="og:description" content="安装JDK/Maven   安装Jenkins  1[root@localhost ~]#  wget http://mirrors.jenkins.io/war/latest/jenkins.war 该版本为每周发布版本，提供了简单但安装过程和流畅的用户体验，还提供了Pipeline特性，用户可编写脚本执行自动化构建">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://masterforcode.github.io/CentOS下安装Jenkins/解锁Jenkins.PNG">
 <meta property="og:image" content="https://masterforcode.github.io/CentOS下安装Jenkins/自定义Jenkins.PNG">
@@ -27,10 +27,10 @@
 <meta property="og:image" content="https://masterforcode.github.io/CentOS下安装Jenkins/创建项目后的页面.PNG">
 <meta property="og:image" content="https://masterforcode.github.io/CentOS下安装Jenkins/第一次构建.PNG">
 <meta property="og:image" content="https://masterforcode.github.io/CentOS下安装Jenkins/构建信息.PNG">
-<meta property="og:updated_time" content="2018-12-10T12:36:38.233Z">
+<meta property="og:updated_time" content="2018-12-10T13:35:03.379Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS下安装Jenkins">
-<meta name="twitter:description" content="安装JDK/Maven   安装Jenkins1[root@localhost ~]#  wget http://mirrors.jenkins.io/war/latest/jenkins.war  该版本为每周发布版本，提供了简单但安装过程和流畅的用户体验，还提供了Pipeline特性，用户可编写脚本执行自动化构建">
+<meta name="twitter:description" content="安装JDK/Maven   安装Jenkins  1[root@localhost ~]#  wget http://mirrors.jenkins.io/war/latest/jenkins.war 该版本为每周发布版本，提供了简单但安装过程和流畅的用户体验，还提供了Pipeline特性，用户可编写脚本执行自动化构建">
 <meta name="twitter:image" content="https://masterforcode.github.io/CentOS下安装Jenkins/解锁Jenkins.PNG">
   
     <link rel="alternative" href="/atom.xml" title="Sharing" type="application/atom+xml">
@@ -174,13 +174,15 @@
 <p>安装JDK/Maven</p>
 </blockquote>
 <blockquote>
-<p>安装Jenkins<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment">#  wget http://mirrors.jenkins.io/war/latest/jenkins.war</span></span><br></pre></td></tr></table></figure></p>
+<p>安装Jenkins</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment">#  wget http://mirrors.jenkins.io/war/latest/jenkins.war</span></span><br></pre></td></tr></table></figure>
 <p>该版本为每周发布版本，提供了简单但安装过程和流畅的用户体验，还提供了Pipeline特性，用户可编写脚本执行自动化构建</p>
 <a id="more"></a>
 <blockquote>
-<p>打开8080端口<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看防火墙状态</span></span><br><span class="line">[root@localhost ~]<span class="comment"># firewall-cmd --state</span></span><br><span class="line"><span class="comment"># 如果防火墙没有开启，打开防火墙</span></span><br><span class="line">[root@localhost ~]<span class="comment"># systemctl start firewalld.service</span></span><br><span class="line"><span class="comment"># 永久打开端口</span></span><br><span class="line">[root@localhost ~]<span class="comment"># firewall-cmd --zone=public --add-port=8080/tcp --permanent</span></span><br><span class="line"><span class="comment"># 重启防火墙</span></span><br><span class="line">[root@localhost ~]<span class="comment"># systemctl restart firewalld.service</span></span><br><span class="line"><span class="comment"># 重新加载配置</span></span><br><span class="line">[root@localhost ~]<span class="comment"># firewall-cmd --reload</span></span><br></pre></td></tr></table></figure></p>
+<p>打开8080端口</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看防火墙状态</span></span><br><span class="line">[root@localhost ~]<span class="comment"># firewall-cmd --state</span></span><br><span class="line"><span class="comment"># 如果防火墙没有开启，打开防火墙</span></span><br><span class="line">[root@localhost ~]<span class="comment"># systemctl start firewalld.service</span></span><br><span class="line"><span class="comment"># 永久打开端口</span></span><br><span class="line">[root@localhost ~]<span class="comment"># firewall-cmd --zone=public --add-port=8080/tcp --permanent</span></span><br><span class="line"><span class="comment"># 重启防火墙</span></span><br><span class="line">[root@localhost ~]<span class="comment"># systemctl restart firewalld.service</span></span><br><span class="line"><span class="comment"># 重新加载配置</span></span><br><span class="line">[root@localhost ~]<span class="comment"># firewall-cmd --reload</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>打开浏览器输入<a href="http://ip:8080" target="_blank" rel="noopener">http://ip:8080</a></p>
 </blockquote>

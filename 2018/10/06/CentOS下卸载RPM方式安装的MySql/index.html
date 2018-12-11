@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://MasterForCode.github.io">
   <title>CentOS下卸载RPM方式安装的MySql | Sharing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="检查安装的MySql组件12345678[root@localhost ~]# rpm -qa | grep -i mysql# 安装了以下组件mysql-community-libs-8.0.13-1.el7.x86_64mysql-community-libs-compat-8.0.13-1.el7.x86_64mysql80-community-release-el7-1.noarchm">
+  <meta name="description" content="检查安装的MySql组件  12345678[root@localhost ~]# rpm -qa | grep -i mysql# 安装了以下组件mysql-community-libs-8.0.13-1.el7.x86_64mysql-community-libs-compat-8.0.13-1.el7.x86_64mysql80-community-release-el7-1.noarc">
 <meta name="keywords" content="linux,mysql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS下卸载RPM方式安装的MySql">
 <meta property="og:url" content="https://MasterForCode.github.io/2018/10/06/CentOS下卸载RPM方式安装的MySql/index.html">
 <meta property="og:site_name" content="Sharing">
-<meta property="og:description" content="检查安装的MySql组件12345678[root@localhost ~]# rpm -qa | grep -i mysql# 安装了以下组件mysql-community-libs-8.0.13-1.el7.x86_64mysql-community-libs-compat-8.0.13-1.el7.x86_64mysql80-community-release-el7-1.noarchm">
+<meta property="og:description" content="检查安装的MySql组件  12345678[root@localhost ~]# rpm -qa | grep -i mysql# 安装了以下组件mysql-community-libs-8.0.13-1.el7.x86_64mysql-community-libs-compat-8.0.13-1.el7.x86_64mysql80-community-release-el7-1.noarc">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-10T11:34:07.741Z">
+<meta property="og:updated_time" content="2018-12-10T13:36:19.765Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS下卸载RPM方式安装的MySql">
-<meta name="twitter:description" content="检查安装的MySql组件12345678[root@localhost ~]# rpm -qa | grep -i mysql# 安装了以下组件mysql-community-libs-8.0.13-1.el7.x86_64mysql-community-libs-compat-8.0.13-1.el7.x86_64mysql80-community-release-el7-1.noarchm">
+<meta name="twitter:description" content="检查安装的MySql组件  12345678[root@localhost ~]# rpm -qa | grep -i mysql# 安装了以下组件mysql-community-libs-8.0.13-1.el7.x86_64mysql-community-libs-compat-8.0.13-1.el7.x86_64mysql80-community-release-el7-1.noarc">
   
     <link rel="alternative" href="/atom.xml" title="Sharing" type="application/atom+xml">
   
@@ -159,22 +159,26 @@
       
         <hr>
 <blockquote>
-<p>检查安装的MySql组件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># rpm -qa | grep -i mysql</span></span><br><span class="line"><span class="comment"># 安装了以下组件</span></span><br><span class="line">mysql-community-libs-8.0.13-1.el7.x86_64</span><br><span class="line">mysql-community-libs-compat-8.0.13-1.el7.x86_64</span><br><span class="line">mysql80-community-release-el7-1.noarch</span><br><span class="line">mysql-community-common-8.0.13-1.el7.x86_64</span><br><span class="line">mysql-community-client-8.0.13-1.el7.x86_64</span><br><span class="line">mysql-community-server-8.0.13-1.el7.x86_64</span><br></pre></td></tr></table></figure></p>
+<p>检查安装的MySql组件</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># rpm -qa | grep -i mysql</span></span><br><span class="line"><span class="comment"># 安装了以下组件</span></span><br><span class="line">mysql-community-libs-8.0.13-1.el7.x86_64</span><br><span class="line">mysql-community-libs-compat-8.0.13-1.el7.x86_64</span><br><span class="line">mysql80-community-release-el7-1.noarch</span><br><span class="line">mysql-community-common-8.0.13-1.el7.x86_64</span><br><span class="line">mysql-community-client-8.0.13-1.el7.x86_64</span><br><span class="line">mysql-community-server-8.0.13-1.el7.x86_64</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <blockquote>
-<p>关闭MySql服务<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># service mysqld stop</span></span><br></pre></td></tr></table></figure></p>
+<p>关闭MySql服务</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># service mysqld stop</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>卸载MySql各类组件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum remove mysql-community-server-8.0.13-1.el7.x86_64</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum remove mysql-community-libs-8.0.13-1.el7.x86_64</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum remove mysql80-community-release-el7-1.noarch</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum remove mysql-community-common-8.0.13-1.el7.x86_64</span></span><br></pre></td></tr></table></figure></p>
+<p>卸载MySql各类组件</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum remove mysql-community-server-8.0.13-1.el7.x86_64</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum remove mysql-community-libs-8.0.13-1.el7.x86_64</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum remove mysql80-community-release-el7-1.noarch</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum remove mysql-community-common-8.0.13-1.el7.x86_64</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>收集MySql对应的文件夹信息并删除<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># find / -name mysql</span></span><br><span class="line">[root@localhost ~]<span class="comment"># rm -rf  /var/lib/mysql/</span></span><br></pre></td></tr></table></figure></p>
+<p>收集MySql对应的文件夹信息并删除</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># find / -name mysql</span></span><br><span class="line">[root@localhost ~]<span class="comment"># rm -rf  /var/lib/mysql/</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>删除用户及用户组<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># userdel mysql</span></span><br><span class="line">[root@localhost ~]<span class="comment"># groupdel mysql</span></span><br></pre></td></tr></table></figure></p>
+<p>删除用户及用户组</p>
 </blockquote>
-
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># userdel mysql</span></span><br><span class="line">[root@localhost ~]<span class="comment"># groupdel mysql</span></span><br></pre></td></tr></table></figure>
       
 
       

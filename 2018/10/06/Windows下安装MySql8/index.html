@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Sharing">
 <meta property="og:description" content="下载   卸载旧MySql服务">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-10T11:44:37.488Z">
+<meta property="og:updated_time" content="2018-12-10T13:37:01.006Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows下安装MySql8">
 <meta name="twitter:description" content="下载   卸载旧MySql服务">
@@ -191,6 +191,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line"><span class="comment"># 设置3306端口</span></span><br><span class="line">port=3306</span><br><span class="line"><span class="comment"># 设置mysql的安装目录</span></span><br><span class="line">basedir=D:\\soft\\mysql-8.0.13-winx64   <span class="comment"># 切记此处一定要用双斜杠\\，单斜杠我这里会出错。</span></span><br><span class="line"><span class="comment"># 设置mysql数据库的数据的存放目录</span></span><br><span class="line">datadir=D:\\soft\\mysql-8.0.13-winx64\\data   <span class="comment"># 此处同上</span></span><br><span class="line"><span class="comment"># 允许最大连接数</span></span><br><span class="line">max_connections=200</span><br><span class="line"><span class="comment"># 允许连接失败的次数。这是为了防止有人从该主机试图攻击数据库系统</span></span><br><span class="line">max_connect_errors=10</span><br><span class="line"><span class="comment"># 服务端使用的字符集默认为UTF8</span></span><br><span class="line">character-set-server=utf8</span><br><span class="line"><span class="comment"># 创建新表时将使用的默认存储引擎</span></span><br><span class="line">default-storage-engine=INNODB</span><br><span class="line"><span class="comment"># 默认使用“mysql_native_password”插件认证</span></span><br><span class="line">default_authentication_plugin=mysql_native_password</span><br><span class="line">[mysql]</span><br><span class="line"><span class="comment"># 设置mysql客户端默认字符集</span></span><br><span class="line">default-character-set=utf8</span><br><span class="line">[client]</span><br><span class="line"><span class="comment"># 设置mysql客户端连接服务端时默认使用的端口</span></span><br><span class="line">port=3306</span><br><span class="line">default-character-set=utf8</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>初始化</p>
+</blockquote>
 <ul>
 <li>以管理员身份运行cmd命令，并将路径换到mysql的bin目录下</li>
 <li>初始化数据库，运行命令mysqld –initialize –console，记下控制台输出数据，该数据中有初始化密码</li>
@@ -201,7 +202,6 @@
 <li>修改密码加密方式，运行alter user ‘root‘@’localhost’ IDENTIFIED WITH mysql_native_password BY ‘wangBin_123’;</li>
 <li>修改时区，运行set global time_zone=’+8:00’;</li>
 </ul>
-</blockquote>
 
       
 

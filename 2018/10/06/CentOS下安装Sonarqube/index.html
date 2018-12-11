@@ -8,24 +8,24 @@
   <link rel="dns-prefetch" href="https://MasterForCode.github.io">
   <title>CentOS下安装Sonarqube | Sharing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装jdk(1.8)   安装MySql(版本为5.6~8.0)12&amp;lt;!--创建数据库--&amp;gt;mysql&amp;gt; CREATE DATABASE sonar DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;">
+  <meta name="description" content="安装jdk(1.8)   安装MySql(版本为5.6~8.0)  12&amp;lt;!--创建数据库--&amp;gt;mysql&amp;gt; CREATE DATABASE sonar DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;">
 <meta name="keywords" content="linux,sonarqube">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS下安装Sonarqube">
 <meta property="og:url" content="https://MasterForCode.github.io/2018/10/06/CentOS下安装Sonarqube/index.html">
 <meta property="og:site_name" content="Sharing">
-<meta property="og:description" content="安装jdk(1.8)   安装MySql(版本为5.6~8.0)12&amp;lt;!--创建数据库--&amp;gt;mysql&amp;gt; CREATE DATABASE sonar DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;">
+<meta property="og:description" content="安装jdk(1.8)   安装MySql(版本为5.6~8.0)  12&amp;lt;!--创建数据库--&amp;gt;mysql&amp;gt; CREATE DATABASE sonar DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://masterforcode.github.io/2018/10/06/CentOS下安装Sonarqube/sonarqube初始页面.png">
-<meta property="og:image" content="https://masterforcode.github.io/2018/10/06/CentOS下安装Sonarqube/sonarqube登陆.PNG">
-<meta property="og:image" content="https://masterforcode.github.io/2018/10/06/CentOS下安装Sonarqube/sonarqube初次登陆后页面.PNG">
-<meta property="og:image" content="https://masterforcode.github.io/2018/10/06/CentOS下安装Sonarqube/sonarqube主界面.PNG">
-<meta property="og:image" content="https://masterforcode.github.io/2018/10/06/CentOS下安装Sonarqube/sonarqube安装汉化插件.png">
-<meta property="og:updated_time" content="2018-12-10T11:33:26.303Z">
+<meta property="og:image" content="https://masterforcode.github.io/CentOS下安装Sonarqube/sonarqube初始页面.png">
+<meta property="og:image" content="https://masterforcode.github.io/CentOS下安装Sonarqube/sonarqube登陆.PNG">
+<meta property="og:image" content="https://masterforcode.github.io/CentOS下安装Sonarqube/sonarqube初次登陆后页面.PNG">
+<meta property="og:image" content="https://masterforcode.github.io/CentOS下安装Sonarqube/sonarqube主界面.PNG">
+<meta property="og:image" content="https://masterforcode.github.io/CentOS下安装Sonarqube/sonarqube安装汉化插件.png">
+<meta property="og:updated_time" content="2018-12-10T13:32:51.062Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS下安装Sonarqube">
-<meta name="twitter:description" content="安装jdk(1.8)   安装MySql(版本为5.6~8.0)12&amp;lt;!--创建数据库--&amp;gt;mysql&amp;gt; CREATE DATABASE sonar DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;">
-<meta name="twitter:image" content="https://masterforcode.github.io/2018/10/06/CentOS下安装Sonarqube/sonarqube初始页面.png">
+<meta name="twitter:description" content="安装jdk(1.8)   安装MySql(版本为5.6~8.0)  12&amp;lt;!--创建数据库--&amp;gt;mysql&amp;gt; CREATE DATABASE sonar DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;">
+<meta name="twitter:image" content="https://masterforcode.github.io/CentOS下安装Sonarqube/sonarqube初始页面.png">
   
     <link rel="alternative" href="/atom.xml" title="Sharing" type="application/atom+xml">
   
@@ -168,55 +168,69 @@
 <p>安装jdk(1.8)</p>
 </blockquote>
 <blockquote>
-<p>安装MySql(版本为5.6~8.0)<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--创建数据库--&gt;</span><br><span class="line">mysql&gt; CREATE DATABASE sonar DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;</span><br></pre></td></tr></table></figure></p>
+<p>安装MySql(版本为5.6~8.0)</p>
 </blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--创建数据库--&gt;</span><br><span class="line">mysql&gt; CREATE DATABASE sonar DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <blockquote>
-<p><a href="https://www.sonarqube.org/downloads/" target="_blank" rel="noopener">下载sonarqube</a>以及解压<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新建文件夹</span></span><br><span class="line">[root@localhost ~]<span class="comment"># mkdir /usr/local/sonarqube</span></span><br><span class="line"><span class="comment"># 解压到指定目录</span></span><br><span class="line">[root@localhost ~]<span class="comment"># unzip sonarqube-7.4.zip -d /usr/local/sonarqube/</span></span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.sonarqube.org/downloads/" target="_blank" rel="noopener">下载sonarqube</a>以及解压</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新建文件夹</span></span><br><span class="line">[root@localhost ~]<span class="comment"># mkdir /usr/local/sonarqube</span></span><br><span class="line"><span class="comment"># 解压到指定目录</span></span><br><span class="line">[root@localhost ~]<span class="comment"># unzip sonarqube-7.4.zip -d /usr/local/sonarqube/</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看解压后的文件</span></span><br><span class="line">[root@localhost sonarqube-7.4]<span class="comment"># ll -a</span></span><br><span class="line">total 12</span><br><span class="line">drwxr-xr-x. 11 root root  141 Oct 29 09:24 .</span><br><span class="line">drwxr-xr-x.  3 root root   27 Nov 14 22:59 ..</span><br><span class="line">drwxr-xr-x.  8 root root  136 Oct 29 09:19 bin</span><br><span class="line">drwxr-xr-x.  2 root root   50 Oct 29 09:19 conf</span><br><span class="line">-rw-r--r--.  1 root root 7651 Oct 29 09:19 COPYING</span><br><span class="line">drwxr-xr-x.  2 root root   24 Oct 29 09:19 data</span><br><span class="line">drwxr-xr-x.  7 root root  150 Oct 29 09:19 elasticsearch</span><br><span class="line">drwxr-xr-x.  4 root root   40 Oct 29 09:19 extensions</span><br><span class="line">drwxr-xr-x.  6 root root   91 Oct 29 09:24 lib</span><br><span class="line">drwxr-xr-x.  2 root root   24 Oct 29 09:19 logs</span><br><span class="line">drwxr-xr-x.  2 root root   24 Oct 29 09:19 temp</span><br><span class="line">drwxr-xr-x.  9 root root 4096 Oct 29 09:24 web</span><br><span class="line"><span class="comment"># 修改conf目录下的sonar.properties配置文件</span></span><br><span class="line">[root@localhost sonarqube-7.4]<span class="comment"># vi ./conf/sonar.properties </span></span><br><span class="line"><span class="comment"># 添加如下内容，注意修改数据库为自己的相关信息</span></span><br><span class="line">sonar.jdbc.url=jdbc:mysql://localhost:3306/sonar?useUnicode=<span class="literal">true</span>&amp;characterEncoding=utf8&amp;rewriteBatchedStatements=<span class="literal">true</span>&amp;useConfigs=maxPerformance&amp;useSSL=<span class="literal">false</span></span><br><span class="line">sonar.jdbc.username=root</span><br><span class="line">sonar.jdbc.password=wangBin_123</span><br><span class="line">sonar.sorceEncoding=UTF-8</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>创建用户<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新增用户</span></span><br><span class="line">[root@localhost sonarqube-7.4]<span class="comment"># useradd sonar</span></span><br><span class="line"><span class="comment"># 赋予密码</span></span><br><span class="line">[root@localhost sonarqube-7.4]<span class="comment"># passwd sonar</span></span><br></pre></td></tr></table></figure></p>
+<p>创建用户</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新增用户</span></span><br><span class="line">[root@localhost sonarqube-7.4]<span class="comment"># useradd sonar</span></span><br><span class="line"><span class="comment"># 赋予密码</span></span><br><span class="line">[root@localhost sonarqube-7.4]<span class="comment"># passwd sonar</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>修改用户组<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 赋予对该文件的操作权限</span></span><br><span class="line">[root@localhost ~]<span class="comment"># chown -R sonar:sonar /usr/local/sonarqube/</span></span><br></pre></td></tr></table></figure></p>
+<p>修改用户组</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 赋予对该文件的操作权限</span></span><br><span class="line">[root@localhost ~]<span class="comment"># chown -R sonar:sonar /usr/local/sonarqube/</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>切换用户<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost sonarqube-7.4]<span class="comment"># su - sonar</span></span><br></pre></td></tr></table></figure></p>
+<p>切换用户</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost sonarqube-7.4]<span class="comment"># su - sonar</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>启动sonarqube<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[sonar@localhost ~]$ /usr/<span class="built_in">local</span>/sonarqube/sonarqube-7.4/bin/linux-x86-64/sonar.sh start</span><br></pre></td></tr></table></figure></p>
+<p>启动sonarqube</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[sonar@localhost ~]$ /usr/<span class="built_in">local</span>/sonarqube/sonarqube-7.4/bin/linux-x86-64/sonar.sh start</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>查看启动情况<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># cat /usr/local/sonarqube/sonarqube-7.4/logs/sonar.log</span></span><br></pre></td></tr></table></figure></p>
+<p>查看启动情况</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># cat /usr/local/sonarqube/sonarqube-7.4/logs/sonar.log</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>删除temp<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 若出现权限问题时，删除temp文件夹</span></span><br><span class="line">[root@localhost ~]<span class="comment"># rm -rf /usr/local/sonarqube/sonarqube-7.4/temp/</span></span><br></pre></td></tr></table></figure></p>
+<p>删除temp</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 若出现权限问题时，删除temp文件夹</span></span><br><span class="line">[root@localhost ~]<span class="comment"># rm -rf /usr/local/sonarqube/sonarqube-7.4/temp/</span></span><br></pre></td></tr></table></figure>
 <p><strong>在某些版本中重新启动时会出现权限问题，删除temp文件夹</strong></p>
 <blockquote>
-<p>开放9000端口<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看防火墙状态</span></span><br><span class="line">[root@localhost ~]<span class="comment"># firewall-cmd --state</span></span><br><span class="line"><span class="comment"># 如果防火墙没有开启，打开防火墙</span></span><br><span class="line">[root@localhost ~]<span class="comment"># systemctl start firewalld.service</span></span><br><span class="line"><span class="comment"># 永久打开端口</span></span><br><span class="line">[root@localhost ~]<span class="comment"># firewall-cmd --zone=public --add-port=9000/tcp --permanent</span></span><br><span class="line"><span class="comment"># 重启防火墙</span></span><br><span class="line">[root@localhost ~]<span class="comment"># systemctl restart firewalld.service</span></span><br><span class="line"><span class="comment"># 重新加载配置</span></span><br><span class="line">[root@localhost ~]<span class="comment"># firewall-cmd --reload</span></span><br></pre></td></tr></table></figure></p>
+<p>开放9000端口</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看防火墙状态</span></span><br><span class="line">[root@localhost ~]<span class="comment"># firewall-cmd --state</span></span><br><span class="line"><span class="comment"># 如果防火墙没有开启，打开防火墙</span></span><br><span class="line">[root@localhost ~]<span class="comment"># systemctl start firewalld.service</span></span><br><span class="line"><span class="comment"># 永久打开端口</span></span><br><span class="line">[root@localhost ~]<span class="comment"># firewall-cmd --zone=public --add-port=9000/tcp --permanent</span></span><br><span class="line"><span class="comment"># 重启防火墙</span></span><br><span class="line">[root@localhost ~]<span class="comment"># systemctl restart firewalld.service</span></span><br><span class="line"><span class="comment"># 重新加载配置</span></span><br><span class="line">[root@localhost ~]<span class="comment"># firewall-cmd --reload</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>访问<br><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://192.168.0.111:9000</span><br></pre></td></tr></table></figure></p>
+<p>访问</p>
 </blockquote>
-<p><img src="/2018/10/06/CentOS下安装Sonarqube/sonarqube初始页面.png" alt=""></p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://192.168.0.111:9000</span><br></pre></td></tr></table></figure>
+<p><img src="/CentOS下安装Sonarqube/sonarqube初始页面.png" alt=""></p>
 <p>点击log in</p>
-<p><img src="/2018/10/06/CentOS下安装Sonarqube/sonarqube登陆.PNG" alt=""><br>输入默认账户密码admin/admin</p>
-<p><img src="/2018/10/06/CentOS下安装Sonarqube/sonarqube初次登陆后页面.PNG" alt=""><br>这里是让你输入一个用户名，生成一个token，主要用于后面其他插件如idea时，代替用户名、密码登录。可以后面需要的时候再生成，这里跳过，选择右下角的skip this tutorial。</p>
+<p><img src="/CentOS下安装Sonarqube/sonarqube登陆.PNG" alt=""><br>输入默认账户密码admin/admin</p>
+<p><img src="/CentOS下安装Sonarqube/sonarqube初次登陆后页面.PNG" alt=""><br>这里是让你输入一个用户名，生成一个token，主要用于后面其他插件如idea时，代替用户名、密码登录。可以后面需要的时候再生成，这里跳过，选择右下角的skip this tutorial。</p>
 <blockquote>
-<p>汉化<br><img src="/2018/10/06/CentOS下安装Sonarqube/sonarqube主界面.PNG" alt=""><br>点击界面上的Adminstration,然后选择Marketplace，在Plugins一栏，搜索Chinese Pack，然后点击insatll进行安装</p>
+<p>汉化</p>
 </blockquote>
-<p><img src="/2018/10/06/CentOS下安装Sonarqube/sonarqube安装汉化插件.png" alt=""><br>汉化完成后点击Restart</p>
+<p><img src="/CentOS下安装Sonarqube/sonarqube主界面.PNG" alt=""><br>点击界面上的Adminstration,然后选择Marketplace，在Plugins一栏，搜索Chinese Pack，然后点击insatll进行安装</p>
+<p><img src="/CentOS下安装Sonarqube/sonarqube安装汉化插件.png" alt=""><br>汉化完成后点击Restart</p>
 <blockquote>
-<p><a href="https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner" target="_blank" rel="noopener">下载Sonar-Scaner</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新建文件夹</span></span><br><span class="line">[root@localhost ~]<span class="comment"># mkdir /usr/local/sonar-scaner</span></span><br><span class="line"><span class="comment"># 解压到指定目录</span></span><br><span class="line">[root@localhost ~]<span class="comment"># unzip sonar-scanner-cli-3.2.0.1227-linux.zip -d /usr/local/sonar-scaner/</span></span><br></pre></td></tr></table></figure></p>
+<p><a href="https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner" target="_blank" rel="noopener">下载Sonar-Scaner</a></p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新建文件夹</span></span><br><span class="line">[root@localhost ~]<span class="comment"># mkdir /usr/local/sonar-scaner</span></span><br><span class="line"><span class="comment"># 解压到指定目录</span></span><br><span class="line">[root@localhost ~]<span class="comment"># unzip sonar-scanner-cli-3.2.0.1227-linux.zip -d /usr/local/sonar-scaner/</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>编辑配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># vi /usr/local/sonar-scaner/sonar-scanner-3.2.0.1227-linux/conf/sonar-scanner.properties </span></span><br><span class="line"><span class="comment"># 修改以下配置，地址为sonarqube的地址</span></span><br><span class="line">sonar.host.url=http://localhost:9000</span><br></pre></td></tr></table></figure></p>
+<p>编辑配置文件</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># vi /usr/local/sonar-scaner/sonar-scanner-3.2.0.1227-linux/conf/sonar-scanner.properties </span></span><br><span class="line"><span class="comment"># 修改以下配置，地址为sonarqube的地址</span></span><br><span class="line">sonar.host.url=http://localhost:9000</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>验证<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># /usr/local/sonar-scaner/sonar-scanner-3.2.0.1227-linux/bin/sonar-scanner -h</span></span><br><span class="line">INFO: </span><br><span class="line">INFO: usage: sonar-scanner [options]</span><br><span class="line">INFO: </span><br><span class="line">INFO: Options:</span><br><span class="line">INFO:  -D,--define &lt;arg&gt;     Define property</span><br><span class="line">INFO:  -h,--<span class="built_in">help</span>             Display <span class="built_in">help</span> information</span><br><span class="line">INFO:  -v,--version          Display version information</span><br><span class="line">INFO:  -X,--debug            Produce execution debug output</span><br></pre></td></tr></table></figure></p>
+<p>验证</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># /usr/local/sonar-scaner/sonar-scanner-3.2.0.1227-linux/bin/sonar-scanner -h</span></span><br><span class="line">INFO: </span><br><span class="line">INFO: usage: sonar-scanner [options]</span><br><span class="line">INFO: </span><br><span class="line">INFO: Options:</span><br><span class="line">INFO:  -D,--define &lt;arg&gt;     Define property</span><br><span class="line">INFO:  -h,--<span class="built_in">help</span>             Display <span class="built_in">help</span> information</span><br><span class="line">INFO:  -v,--version          Display version information</span><br><span class="line">INFO:  -X,--debug            Produce execution debug output</span><br></pre></td></tr></table></figure>
 
       
 
